@@ -70,7 +70,8 @@ public class SmartPhone extends Phone{
         System.out.println("вы снимаете видео!");
     }
   
-  public class CodeAnalyzer {
+    import java.util.Arrays
+    public class CodeAnalyzer {
 
    public static void analyzeClass(Object o) {
        Class clazz = o.getClass();
