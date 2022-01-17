@@ -70,16 +70,22 @@ public class SmartPhone extends Phone{
         System.out.println("вы снимаете видео!");
     }
   
-    import java.util.Arrays
-    public class CodeAnalyzer {
+    import java.lang.reflect.*;
+import java.util.Arrays;
 
-   public static void analyzeClass(Object o) {
-       Class clazz = o.getClass();
-       System.out.println("Имя класса: " + clazz);
-       System.out.println("Поля класса: " + Arrays.toString(clazz.getDeclaredFields()));
-       System.out.println("Родительский класс: " + clazz.getSuperclass());
-       System.out.println("Методы класса: " +  Arrays.toString(clazz.getDeclaredMethods()));
-       System.out.println("Конструкторы класса: " + Arrays.toString(clazz.getConstructors()));
-   }
+public class CodeReflexia{
+    public static void analyzeClass(@NotNull Object Phone) {
+        Class clazz = Phone.getClass();
+        System.out.println("Имя класса: " + clazz);
+        System.out.println("Поля класса: " + Arrays.toString(clazz.getDeclaredFields()));
+        System.out.println("Родительский класс: " + clazz.getSuperclass());
+        System.out.println("Методы класса: " +  Arrays.toString(clazz.getDeclaredMethods()));
+        System.out.println("Конструкторы класса: " + Arrays.toString(clazz.getConstructors()));
+    }
+    public static void main(String[] args) {
+
+        analyzeClass(new Phone());
+    }
+}
   
 }
